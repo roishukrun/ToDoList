@@ -23,6 +23,9 @@ mongoose.connect(`mongodb+srv://${mongodbUserName}:${mongodbPassword}@todolist-c
   if (err) {
     console.log(err);
   }
+  else {
+    console.log(`Mongoose connected succefully to: mongodb+srv://${mongodbUserName}:${mongodbPassword}@todolist-cluster.cbpmeoe.mongodb.net/${dbName}?retryWrites=true&w=majority`);
+  }
 });
 
 // Connect to local database.
@@ -148,5 +151,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, function () {
-  console.log("Server has started successfully!");
+  console.log(`Server has started successfully on port ${port}!`);
 });
